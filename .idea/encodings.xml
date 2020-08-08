@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/big-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/confid-server-8110/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server-8101/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server-8102/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/production-3001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/production-3002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/production-3003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-hystrix-4001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq-stream-5001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-1001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-1002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-1003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-api-feign/hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-api-feign/production/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

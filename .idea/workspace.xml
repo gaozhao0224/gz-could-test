@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0220a0b-59f3-4e0d-b8a7-9a7002032247" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/big-data.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/java/com/example/BigDataApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/java/com/example/bigdata/config/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/java/com/example/bigdata/savadata/AddBigDataSQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/java/com/example/bigdata/savadata/ChineseName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/com/example/BigDataApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/com/example/bigdata/config/ConfigProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/com/example/bigdata/savadata/AddBigDataSQL.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/com/example/bigdata/savadata/ChineseName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big-data/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/annotation/AutoId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/aspect/AutoIncrementId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/MybatisPlusAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/TransactionAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/WebMvcAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/context/HttpContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/context/SpringContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/context/StringPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/entity/production/GzPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/enums/CustomizeGranterType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/enums/ResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/exception/RuntimeExceptionWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/exception/VersionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/handler/ArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/handler/FillFieldHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/handler/ResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/properties/SnowflakeIdProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/properties/TokenProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/response/ErrorResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/response/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/DateTimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/ExcelReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/ExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/ExcelWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/GeneralCheckUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/IPUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/MapUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/util/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/uuid/SnowflakeIdWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/vo/ConditionVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/common/vo/SearchVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/META-INF/common.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/annotation/AutoId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/aspect/AutoIncrementId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/autoconfigure/MybatisPlusAutoConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/autoconfigure/TransactionAutoConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/autoconfigure/WebMvcAutoConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/context/HttpContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/context/SpringContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/context/StringPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/controller/BaseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/entity/BaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/entity/production/GzPerson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/enums/CustomizeGranterType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/enums/ResultCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/exception/BusinessException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/exception/RuntimeExceptionWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/exception/VersionException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/handler/ArgumentResolver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/handler/FillFieldHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/handler/ResponseHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/properties/SnowflakeIdProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/properties/TokenProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/response/ErrorResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/response/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/DateTimeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/ExcelReader$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/ExcelReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/ExcelUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/ExcelUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/ExcelWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/GeneralCheckUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/IPUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/MapUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/MapUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/util/StringUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/uuid/SnowflakeIdWorker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/vo/ConditionVO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/common/vo/SearchVO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/src/main/java/com/example/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/target/classes/META-INF/confid-server-8110.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confid-server-8110/target/classes/com/example/ConfigServerApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/src/main/java/com/example/ConfigServer8101Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/src/main/java/com/example/config/test/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/target/classes/com/example/ConfigServer8101Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8101/target/classes/com/example/config/test/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/config-server-8102.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/src/main/java/com/example/ConfigServer8102Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/src/main/java/com/example/config/test/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/target/classes/com/example/ConfigServer8102Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server-8102/target/classes/com/example/config/test/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/ConsumerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/GzPersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/HystrixController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/LoadBalaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/LockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/mapper/GzPersonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/service/IGzPersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/service/impl/GzPersonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/util/DateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/util/PropertySourceProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/test/java/com/example/consumer/ConsumerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/META-INF/consumer.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/ConsumerApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/controller/GzPersonController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/controller/HystrixController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/controller/LoadBalaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/controller/LockController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/mapper/GzPersonMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/service/IGzPersonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/test/service/impl/GzPersonServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/util/CodeGenerator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/util/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/util/DateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/example/consumer/util/PropertySourceProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/test-classes/com/example/consumer/ConsumerApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/ContractApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/controller/BsContractSignLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/mapper/BsContractSignLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/service/IBsContractSignLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/service/impl/BsContractSignLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/java/com/example/contract/vo/BsContractSignLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/META-INF/contract.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/ContractApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/controller/BsContractSignLogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/mapper/BsContractSignLogMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/service/IBsContractSignLogService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/service/impl/BsContractSignLogServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/util/CodeGenerator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/util/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/com/example/contract/vo/BsContractSignLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contract/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/SpringCloud 第二季2020.03.05完整修复版.mmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/zipkin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/启动自己jar包方法（不适用pom依赖）.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/给本地host添加域名.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/表结构.pdm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/gateway-9001.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/src/main/java/com/example/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/src/main/java/com/example/file/MyVerifyGatewayFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/target/classes/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/target/classes/com/example/GatewayApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-9001/target/classes/com/example/file/MyVerifyGatewayFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/production-3001.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/Production3001Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/config/RedissonClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/controller/GzPersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/mapper/GzPersonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/service/IGzPersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/service/impl/GzPersonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/test/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/java/com/example/production/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/src/test/java/com/example/production3001/Production3001ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/META-INF/production-3001.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/Production3001Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/config/RedissonClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/controller/GzPersonController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/mapper/GzPersonMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/service/IGzPersonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/service/impl/GzPersonServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/test/controller/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/util/CodeGenerator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/com/example/production/util/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3001/target/test-classes/com/example/production3001/Production3001ApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/Production3002Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/config/RedissonClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/controller/GzPersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/mapper/GzPersonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/service/IGzPersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/service/impl/GzPersonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/test/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/java/com/example/production/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/Production3002Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/config/RedissonClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/controller/GzPersonController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/mapper/GzPersonMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/service/IGzPersonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/service/impl/GzPersonServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/test/controller/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/util/CodeGenerator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/com/example/production/util/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3002/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/Production3003Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/config/RedissonClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/controller/GzPersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/mapper/GzPersonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/service/IGzPersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/service/impl/GzPersonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/test/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/java/com/example/production/util/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/Production3003Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/config/RedissonClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/controller/GzPersonController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/mapper/GzPersonMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/service/IGzPersonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/service/impl/GzPersonServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/test/controller/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/util/CodeGenerator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/com/example/production/util/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production-3003/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/java/com/example/HystrixApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/java/com/example/hystrix/test/controller/ProviderHystrixController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/java/com/example/hystrix/test/service/ProviderHystrixService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/java/com/example/hystrix/test/service/impl/ProviderHystrixServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/META-INF/provider-hystrix-4001.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/com/example/HystrixApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/com/example/hystrix/test/controller/ProviderHystrixController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/com/example/hystrix/test/service/ProviderHystrixService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/com/example/hystrix/test/service/impl/ProviderHystrixServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-hystrix-4001/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-stream-5001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-stream-5001/src/main/java/com/example/stream/controller/SendMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-stream-5001/src/main/java/com/example/stream/service/SendMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-stream-5001/src/main/java/com/example/stream/service/impl/SendMessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-stream-5001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/src/main/java/com/example/Server1001Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/target/classes/META-INF/server-1001.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/target/classes/META-INF/server.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1001/target/classes/com/example/Server1001Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/src/main/java/com/example/Server1002Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/target/classes/META-INF/server-1002.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1002/target/classes/com/example/Server1002Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/src/main/java/com/example/Server1003Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/target/classes/META-INF/server-1003.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-1003/target/classes/com/example/Server1003Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/hystrix/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/hystrix/src/main/java/com/feign/hystrix/service/HystrixService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/hystrix/src/main/java/com/feign/hystrix/service/HystrixServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/hystrix/target/classes/com/feign/hystrix/service/HystrixService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/hystrix/target/classes/com/feign/hystrix/service/HystrixServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/production/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/production/src/main/java/com/feign/production/service/ProductionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/production/target/classes/META-INF/production.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/production/target/classes/com/feign/production/service/ProductionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-api-feign/server-api-feign.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gz-spring-could" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="G:\gzproject\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="G:\gzproject\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1f50a4iFmlE4tP9kKGlquH4KRXP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.common.entity.production" />
+      <recent name="com.example.production.controller" />
+      <recent name="com.example.configserver" />
+      <recent name="com.example" />
+      <recent name="com.example.config.test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\gzproject\gz-spring-could\rabbitmq-stream-5001\src\main\resources" />
+      <recent name="G:\gzproject\gz-spring-could\doc" />
+      <recent name="G:\gzproject\gz-spring-could\config-server-8102\src\main\resources" />
+      <recent name="G:\gzproject\gz-spring-could\config-server-8101\src\main\resources" />
+      <recent name="G:\gzproject\gz-spring-could\confid-server-8100\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="AndroidJUnit" />
+        <option value="Application" />
+        <option value="CompoundRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConfigServer8101Application">
+    <configuration name="ConfigServer8101Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="config-server-8101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ConfigServer8101Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServer8102Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="config-server-8102" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ConfigServer8102Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="confid-server-8110" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Production3001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="production-3001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Production3001Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Production3002Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="production-3002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Production3002Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Production3001Application" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.Production3002Application" />
+      <item itemvalue="Spring Boot.ConfigServer8102Application" />
+      <item itemvalue="Spring Boot.ConfigServer8101Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ConfigServer8102Application" />
+        <item itemvalue="Spring Boot.ConfigServer8101Application" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="Spring Boot.Production3002Application" />
+        <item itemvalue="Spring Boot.Production3001Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.26844263" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Lenovo\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0220a0b-59f3-4e0d-b8a7-9a7002032247" name="Default Changelist" comment="" />
+      <created>1595492706756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595492706756</updated>
+      <workItem from="1595492710904" duration="4673000" />
+      <workItem from="1595503972445" duration="2039000" />
+      <workItem from="1595506071098" duration="2819000" />
+      <workItem from="1595644874191" duration="18857000" />
+      <workItem from="1595816178469" duration="13809000" />
+      <workItem from="1595916788294" duration="525000" />
+      <workItem from="1595917504930" duration="67000" />
+      <workItem from="1595917889744" duration="8000" />
+      <workItem from="1595988663648" duration="6843000" />
+      <workItem from="1596009469924" duration="4783000" />
+      <workItem from="1596022090918" duration="17000" />
+      <workItem from="1596022313893" duration="3302000" />
+      <workItem from="1596072720472" duration="57000" />
+      <workItem from="1596088831024" duration="5776000" />
+      <workItem from="1596112185587" duration="1615000" />
+      <workItem from="1596158715779" duration="10000" />
+      <workItem from="1596159030050" duration="10662000" />
+      <workItem from="1596201984296" duration="4805000" />
+      <workItem from="1596264626215" duration="1717000" />
+      <workItem from="1596266354685" duration="99000" />
+      <workItem from="1596268519512" duration="4712000" />
+      <workItem from="1596274735853" duration="1962000" />
+      <workItem from="1596276731325" duration="2358000" />
+      <workItem from="1596335273871" duration="15853000" />
+      <workItem from="1596434850623" duration="10470000" />
+      <workItem from="1596505420332" duration="17408000" />
+      <workItem from="1596598030788" duration="12341000" />
+      <workItem from="1596677276022" duration="17566000" />
+      <workItem from="1596763828858" duration="8635000" />
+      <workItem from="1596850935821" duration="1895000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Inspections" timestamp="1595646035167">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1595646035167" />
+    <state x="361" y="74" key="#New_CloudFoundry_Connection" timestamp="1596266332024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#New_CloudFoundry_Connection/0.0.1536.824@0.0.1536.824" timestamp="1596266332024" />
+    <state x="361" y="74" key="#New_Docker_Connection" timestamp="1596266056063">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#New_Docker_Connection/0.0.1536.824@0.0.1536.824" timestamp="1596266056063" />
+    <state x="361" y="74" key="#New_Google_App_Engine_Connection" timestamp="1596266335939">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#New_Google_App_Engine_Connection/0.0.1536.824@0.0.1536.824" timestamp="1596266335939" />
+    <state x="361" y="74" key="#Project_Structure" timestamp="1596770889631">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1596770889631" />
+    <state x="596" y="295" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1596618467493">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="596" y="295" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/0.0.1536.824@0.0.1536.824" timestamp="1596618467493" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1596771119372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596771119372" />
+    <state x="405" y="340" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596698080798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="405" y="340" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1596698080798" />
+    <state x="553" y="279" width="456" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595990369767">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="279" width="456" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1595990369767" />
+    <state width="503" height="466" key="DebuggerActiveHint" timestamp="1596454322701">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="503" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1596454322701" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1596855134677">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596855134677" />
+    <state width="1493" height="248" key="GridCell.Tab.0.bottom" timestamp="1596855227621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1493" height="248" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596855227621" />
+    <state width="1493" height="248" key="GridCell.Tab.0.center" timestamp="1596855227621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1493" height="248" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596855227621" />
+    <state width="1493" height="248" key="GridCell.Tab.0.left" timestamp="1596855227621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1493" height="248" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596855227621" />
+    <state width="1493" height="248" key="GridCell.Tab.0.right" timestamp="1596855227621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1493" height="248" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596855227621" />
+    <state width="1070" height="119" key="GridCell.Tab.1.bottom" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.1.center" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.1.left" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.1.right" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.2.bottom" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.2.center" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.2.left" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.2.right" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.3.bottom" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.3.center" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.3.left" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state width="1070" height="119" key="GridCell.Tab.3.right" timestamp="1596853133635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1102" height="149" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596113811359" />
+    <state width="1070" height="119" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1596853133635" />
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1595504867236">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1595504867236" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1596853456548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596853456548" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1596528362652">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1596528362652" />
+    <state x="461" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1596335274293">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1459" y="240" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1596072746368" />
+    <state x="461" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1596158715779" />
+    <state x="461" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596335274293" />
+    <state x="188" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596706729714">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="188" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1596706729714" />
+    <state x="457" y="172" width="755" height="480" key="find.popup" timestamp="1596710465103">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="457" y="172" width="755" height="480" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1596710465103" />
+    <state x="356" y="104" key="new project wizard" timestamp="1596770413074">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="356" y="104" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1596770413074" />
+    <state x="410" y="139" width="700" height="530" key="recent.locations.popup" timestamp="1596204080434">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="410" y="139" width="700" height="530" key="recent.locations.popup/0.0.1536.824@0.0.1536.824" timestamp="1596204080434" />
+    <state x="511" y="45" key="refactoring.ChangeSignatureDialog" timestamp="1596699526545">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="45" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1596699526545" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1596456936713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596456936713" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596698384473">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596698384473" />
+    <state x="472" y="104" key="spring file set editor" timestamp="1596618654750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="472" y="104" key="spring file set editor/0.0.1536.824@0.0.1536.824" timestamp="1596618654750" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/contract/src/main/java/com/example/contract/controller/BsContractSignLogController.java</url>
+          <line>35</line>
+          <properties class="com.example.contract.controller.BsContractSignLogController" method="test" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3001/src/main/java/com/example/production/test/controller/TestController.java</url>
+          <line>29</line>
+          <properties class="com.example.production.test.controller.TestController" method="loadBalancerTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/LoadBalaController.java</url>
+          <line>46</line>
+          <properties class="com.example.consumer.test.controller.LoadBalaController">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/LoadBalaController.java</url>
+          <line>40</line>
+          <properties class="com.example.consumer.test.controller.LoadBalaController">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3001/src/main/java/com/example/production/test/controller/TestController.java</url>
+          <line>44</line>
+          <properties class="com.example.production.test.controller.TestController" method="concurrenceMany">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3002/src/main/java/com/example/production/test/controller/TestController.java</url>
+          <line>47</line>
+          <properties class="com.example.production.test.controller.TestController" method="concurrenceMany">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3002/src/main/java/com/example/production/test/controller/TestController.java</url>
+          <line>99</line>
+          <properties class="com.example.production.test.controller.TestController" method="concurrenceManyRedis">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/provider-hystrix-4001/src/main/java/com/example/hystrix/test/controller/ProviderHystrixController.java</url>
+          <line>38</line>
+          <properties class="com.example.hystrix.test.controller.ProviderHystrixController" method="provider_defaultFallback" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/controller/LockController.java</url>
+          <line>29</line>
+          <properties class="com.example.consumer.test.controller.LockController" method="concurrence">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/service/impl/GzPersonServiceImpl.java</url>
+          <line>30</line>
+          <properties class="com.example.consumer.test.service.impl.GzPersonServiceImpl" method="transactionOneColony" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3001/src/main/java/com/example/production/controller/GzPersonController.java</url>
+          <line>24</line>
+          <properties class="com.example.production.controller.GzPersonController" method="addPerson">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/common/handler/FillFieldHandler.java</url>
+          <line>16</line>
+          <properties class="com.common.handler.FillFieldHandler" method="insertFill">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/production-3001/src/main/java/com/example/production/service/impl/GzPersonServiceImpl.java</url>
+          <line>22</line>
+          <properties class="com.example.production.service.impl.GzPersonServiceImpl" method="getSaveOrUpdate" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/TransactionAutoConfiguration.java</url>
+          <line>28</line>
+          <properties class="com.common.autoconfigure.TransactionAutoConfiguration" method="txAdvice">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/contract/src/main/java/com/example/contract/controller/BsContractSignLogController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/MybatisPlusAutoConfiguration.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/common/autoconfigure/MybatisPlusAutoConfiguration.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/common/aspect/AutoIncrementId.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/contract/src/main/java/com/example/contract/controller/BsContractSignLogController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/contract/src/main/java/com/example/contract/service/impl/BsContractSignLogServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/contract/src/main/java/com/example/contract/aop/cutclass/SignUpdateStatusAspect.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/production-3001/src/main/java/com/example/production/test/controller/TestController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/big-data/src/main/java/com/example/bigdata/savadata/AddBigDataSQL.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/big-data/src/main/java/com/example/bigdata/savadata/AddBigDataSQL.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/util/DateTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/service/impl/GzPersonServiceImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/test/service/impl/GzPersonServiceImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

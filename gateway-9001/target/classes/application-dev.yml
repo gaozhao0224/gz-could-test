@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    gateway:
+       discovery:
+          locator:
+            enabled: true  # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+       routes:
+         - id: gateway-consumer # 路由的id,没有规定规则但要求唯一,建议配合服务名
+           #匹配后提供服务的路由地址
+           #uri: http://localhost:8001
+           uri: lb://consumer   #lb必须加  负载均衡  写路径的话就直接访问路径了
+           predicates:  #断言,路径相匹配的进行路由  必须满足下面所有的 都为true  重点：多个路径需要用逗号分隔 如果下两个-Path=/把下面注释去掉
+                        #那就是一个路径同时满足上下这几个 显然是不行得 所以多个路径匹配使用逗号分开
+             - Path=/hystrix/**,/test/**,/lock/**   #路径匹配
+             - After=2020-03-16T10:06:42.873+08:00[Asia/Shanghai]  #什么时间后生效    可以通过java8新特性的 Date API 获取区域时间
+
+         - id: gateway-production
+           uri: lb://production
+           predicates:
+             - Path=/getLBPro/**,/concurrenceMany/**
+             - After=2020-03-16T10:06:42.873+08:00[Asia/Shanghai]
+
+
+         - id: waiBuLuJing  #搞一个访问外部项目得  成功
+           uri: http://127.0.0.1:8800
+           predicates:
+             - Path=/workbenchData/**   #路径匹配

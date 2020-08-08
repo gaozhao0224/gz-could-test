@@ -1,0 +1,15 @@
+server:
+  port: 1001
+spring:
+  application:
+    name: server
+eureka:
+  instance:
+    hostname: eureka-gz01.com #eureka服务端实例名称   两个Eurake相互注册的时候，发现注册不上，服务都指向了一个节点。查询资料发现当两个机器的 eureka.instance.hostname相同且eureka.client.serviceUrl.defaultZone的域名相同会导致此问题，在同一机器上开启两个host的时候可以配置一下host
+  client:
+    register-with-eureka: false #表示不向注册中心注册自己
+    fetch-registry: false #false表示自己就是注册中心，我的职责就是维护服务实例,并不区检索服务
+    service-url:
+#      defaultZone: http://eureka-gz01.com:1001/eureka/
+      defaultZone: http://eureka-gz02.com:1002/eureka/,http://eureka-gz03.com:1003/eureka/
+

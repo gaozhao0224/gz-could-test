@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 引入默认的一些设置 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <property name="APPNAME" value="contract"/>
+    <property name="FIELD_APPNAME" value="appname"/>
+    <property name="FIELD_INDEXNAME" value="indexname"/>
+
+    <!-- 日志路径 -->
+    <springProperty scope="context" name="LOG_PATH" source="logback.path" defaultValue="/tmp/uselesslogs"/>
+
+    <!-- 日志路径，自己写的代码日志分为两部分存储：debug和info单独存储，warn和error和jar包中日志一起存储 -->
+    <property name="LOG_PATH_BUSI_DEBUG" value="${LOG_PATH}/logs_busi_debug/"/>
+    <property name="LOG_PATH_BUSI_INFO" value="${LOG_PATH}/logs_busi_info/"/>
+    <property name="LOG_PATH_INFO" value="${LOG_PATH}/logs_info/"/>
+    <property name="LOG_PATH_WARN" value="${LOG_PATH}/logs_warn/"/>
+    <property name="LOG_PATH_ERROR" value="${LOG_PATH}/logs_error/"/>
+    <!-- 文件名，和es中索引一一对应 -->
+    <property name="LOG_BUSI_DEBUG" value="log_busi_debug"/>
+    <property name="LOG_BUSI_INFO" value="log_busi_info"/>
+    <property name="LOG_INFO" value="log_info"/>
+    <property name="LOG_WARN" value="log_warn"/>
+    <property name="LOG_ERROR" value="log_error"/>
+    <!-- 日志文件最大的大小 -->
+    <property name="MAX_SIZE" value="10MB"/>
+    <!-- 日志保留时间，因为配合filebeat，所以保留最少时间 -->
+    <property name="MAX_HISTORY" value="1"/>
+
+    <!-- 输出到控制台 ConsoleAppender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 展示格式 layout -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </layout>
+    </appender>
+    <appender name="SYS_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 展示格式 layout -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </layout>
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>return !logger.startsWith("com.fescotech") &amp;&amp; !logger.startsWith("org.springframework.security");</expression>
+            </evaluator>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="FILE_BUSI_DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_BUSI_DEBUG}/${LOG_BUSI_DEBUG}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_BUSI_DEBUG}/${LOG_BUSI_DEBUG}-%d{yyyy-MM-dd}-%i.json</fileNamePattern>
+            <maxFileSize>${MAX_SIZE}</maxFileSize>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+            <customFields>{"${FIELD_APPNAME}":"${APPNAME}","${FIELD_INDEXNAME}":"${LOG_BUSI_DEBUG}"}</customFields>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="FILE_BUSI_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_BUSI_INFO}/${LOG_BUSI_INFO}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_BUSI_INFO}/${LOG_BUSI_INFO}-%d{yyyy-MM-dd}-%i.json</fileNamePattern>
+            <maxFileSize>${MAX_SIZE}</maxFileSize>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+            <customFields>{"${FIELD_APPNAME}":"${APPNAME}","${FIELD_INDEXNAME}":"${LOG_BUSI_INFO}"}</customFields>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="FILE_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_INFO}/${LOG_INFO}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_INFO}/${LOG_INFO}-%d{yyyy-MM-dd}-%i.json</fileNamePattern>
+            <maxFileSize>${MAX_SIZE}</maxFileSize>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+            <customFields>{"${FIELD_APPNAME}":"${APPNAME}","${FIELD_INDEXNAME}":"${LOG_INFO}"}</customFields>
+        </encoder>
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>return level == INFO &amp;&amp; !logger.startsWith("com.fescotech");</expression>
+            </evaluator>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="FILE_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_WARN}/${LOG_WARN}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_WARN}/${LOG_WARN}-%d{yyyy-MM-dd}-%i.json</fileNamePattern>
+            <maxFileSize>${MAX_SIZE}</maxFileSize>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+            <customFields>{"${FIELD_APPNAME}":"${APPNAME}","${FIELD_INDEXNAME}":"${LOG_WARN}"}</customFields>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_ERROR}/${LOG_ERROR}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_ERROR}/${LOG_ERROR}-%d{yyyy-MM-dd}-%i.json</fileNamePattern>
+            <maxFileSize>${MAX_SIZE}</maxFileSize>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+            <customFields>{"${FIELD_APPNAME}":"${APPNAME}","${FIELD_INDEXNAME}":"${LOG_ERROR}"}</customFields>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="ASYNC_FILE_BUSI_DEBUG" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阙值  当队列大小低于这个将丢弃日志，为0的话用不丢弃  -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 队列的大小 -->
+        <queueSize>1024</queueSize>
+        <!-- 不设置neverBolck的话调用的是put方法是阻塞的，设置后调用offer方法是不阻塞的 -->
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="FILE_BUSI_DEBUG"/>
+    </appender>
+
+    <appender name="ASYNC_FILE_BUSI_INFO" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阙值  当队列大小低于这个将丢弃日志，为0的话用不丢弃  -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 队列的大小 -->
+        <queueSize>1024</queueSize>
+        <!-- 不设置neverBolck的话调用的是put方法是阻塞的，设置后调用offer方法是不阻塞的 -->
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="FILE_BUSI_INFO"/>
+    </appender>
+
+    <appender name="ASYNC_FILE_INFO" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阙值  当队列大小低于这个将丢弃日志，为0的话用不丢弃  -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 队列的大小 -->
+        <queueSize>1024</queueSize>
+        <!-- 不设置neverBolck的话调用的是put方法是阻塞的，设置后调用offer方法是不阻塞的 -->
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="FILE_INFO"/>
+    </appender>
+
+    <appender name="ASYNC_FILE_WARN" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阙值  当队列大小低于这个将丢弃日志，为0的话用不丢弃  -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 队列的大小 -->
+        <queueSize>1024</queueSize>
+        <!-- 不设置neverBolck的话调用的是put方法是阻塞的，设置后调用offer方法是不阻塞的 -->
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="FILE_WARN"/>
+    </appender>
+
+    <appender name="ASYNC_FILE_ERROR" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阙值  当队列大小低于这个将丢弃日志，为0的话用不丢弃  -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 队列的大小 -->
+        <queueSize>1024</queueSize>
+        <!-- 不设置neverBolck的话调用的是put方法是阻塞的，设置后调用offer方法是不阻塞的 -->
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="FILE_ERROR"/>
+    </appender>
+
+    <!-- 打印到控制台和输出到json文件 -->
+    <logger name="com.fescotech" level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE_BUSI_DEBUG"/>
+        <appender-ref ref="ASYNC_FILE_BUSI_INFO"/>
+    </logger>
+    <!--<logger name="org.springframework.security" level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE_BUSI_DEBUG"/>
+    </logger>-->
+    <root level="INFO">
+        <appender-ref ref="SYS_CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE_INFO"/>
+        <appender-ref ref="ASYNC_FILE_WARN"/>
+        <appender-ref ref="ASYNC_FILE_ERROR"/>
+    </root>
+
+</configuration>

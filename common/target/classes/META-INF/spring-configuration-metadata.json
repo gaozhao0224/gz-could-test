@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "snowflake",
+      "type": "com.common.properties.SnowflakeIdProperties",
+      "sourceType": "com.common.properties.SnowflakeIdProperties"
+    },
+    {
+      "name": "token",
+      "type": "com.common.properties.TokenProperties",
+      "sourceType": "com.common.properties.TokenProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "snowflake.datacenter-id",
+      "type": "java.lang.Long",
+      "sourceType": "com.common.properties.SnowflakeIdProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "snowflake.worker-id",
+      "type": "java.lang.Long",
+      "sourceType": "com.common.properties.SnowflakeIdProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "token.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.common.properties.TokenProperties"
+    },
+    {
+      "name": "token.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.common.properties.TokenProperties"
+    },
+    {
+      "name": "token.grant-type",
+      "type": "java.lang.String",
+      "sourceType": "com.common.properties.TokenProperties"
+    }
+  ],
+  "hints": []
+}
