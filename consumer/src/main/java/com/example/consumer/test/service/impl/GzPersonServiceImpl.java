@@ -38,9 +38,11 @@ public class GzPersonServiceImpl extends ServiceImpl<GzPersonMapper, GzPerson> i
             gzPerson.setId(IdUtil.simpleUUID());
             Object o1 = productionService.addPerson(gzPerson);*/
 
-           gzPerson.setId(IdUtil.simpleUUID());
-           super.saveOrUpdate(gzPerson);
+           //super.saveOrUpdate(gzPerson);
+           productionService.addPerson(gzPerson);
            int a = 10/0;
+           gzPerson.setId(IdUtil.simpleUUID());
+           gzPerson.setUserName("consumer服务方");
            gzPerson.setId(IdUtil.simpleUUID());
            super.saveOrUpdate(gzPerson);
 
