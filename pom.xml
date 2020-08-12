@@ -25,6 +25,11 @@
         <module>config-server-8101</module>
         <module>config-server-8102</module>
         <module>rabbitmq-stream-5001</module>
+        <module>nacos-consumer-6001</module>
+        <module>nacos-production-7001</module>
+        <module>nacos-production-7002</module>
+        <module>nacos-config-6666</module>
+        <module>java-test-demo</module>
     </modules>
 
 
@@ -52,6 +57,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring cloud alibaba 2.1.0.RELEASE-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
