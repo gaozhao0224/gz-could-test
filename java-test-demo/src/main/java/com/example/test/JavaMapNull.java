@@ -11,6 +11,7 @@ public class JavaMapNull {
         map.put("c","c");
         System.out.println(map.get("d")); //返回  null
         //System.out.println(map.get("d").equals("")); //报错
-
     }
+
+
 }
