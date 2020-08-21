@@ -31,6 +31,7 @@ public class ListTest {
 
         List<ListDto> listDtos = new ArrayList<>();
         ListDto listDto = new ListDto();
+        listDto.setId("123");
         listDto.setName("A");
         listDto.setAge(20);
         listDtos.add(listDto);

@@ -3,7 +3,14 @@ package com.example.test;
 import lombok.Data;
 
 @Data
+/*
+* 虽然Object默认有clone方法
+* 但是必须要实现Cloneable 接口  不然会报  java.lang.CloneNotSupportedException 异常
+* */
 public class ListDto implements Cloneable{
+
+
+    private String id;
 
     private String name;
 
@@ -17,7 +24,8 @@ public class ListDto implements Cloneable{
     @Override
     public String toString() {
         return this.hashCode()+"\tListDto{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }
