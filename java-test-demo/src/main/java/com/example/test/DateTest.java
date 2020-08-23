@@ -42,4 +42,18 @@ public class DateTest {
         map.put("sundayDate", weekEnd);
         System.out.println(map.toString());
     }
+    /*
+    * 当前日期前多少天
+    * */
+    @Test
+    public void getAddSubtractData() {
+        Date date = new Date();//获取当前日期
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");//格式化一下
+        Calendar calendar = Calendar.getInstance();//获取对日期操作的类对象
+        calendar.add(Calendar.DATE, -30);
+        //add方法 参数也可传入 月份，获取的是前几月或后几月的日期
+        //calendar1.add(Calendar.MONTH, -3);
+        Date today = calendar.getTime();
+        System.out.println(sdf.format(today));
+    }
 }
