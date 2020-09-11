@@ -16,13 +16,9 @@ public class AddBigDataSQL {
 
     public static void initConn() throws ClassNotFoundException, SQLException {
 
-       /* String url = "jdbc:mysql://118.24.17.24:3306/big_data?"
-                + "user=root&password=GAOzhao@1233&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC";*/
-/*
-        String url = "jdbc:mysql://localhost:3306/big_data?"
+        //String url = "jdbc:mysql://127.0.0.1:3306/gz-could?user=root&password=root&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai";
+        String url = "jdbc:mysql://127.0.0.1:3306/big_data?"
                 + "user=root&password=root&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC";
-*/
-        String url = "jdbc:mysql://127.0.0.1:3306/gz-could?user=root&password=root&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai";
         try {
             // 动态加载mysql驱动
             Class.forName("com.mysql.jdbc.Driver");
@@ -98,7 +94,7 @@ public class AddBigDataSQL {
         Long begin = System.currentTimeMillis();
         System.out.println("开始插入数据...");
         // sql前缀
-        String prefix = "INSERT INTO tb_data (user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
+        String prefix = "INSERT INTO gz_big_data (user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
         //String prefix = "INSERT INTO tb_data (id, user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
         //随机生成1000家公司
         //String prefix = "INSERT INTO tb_tenement (id, tid, tname) VALUES ";
@@ -139,13 +135,13 @@ public class AddBigDataSQL {
 
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        initConn();
-        insert(100);
-       /* for (int i = 0; i < 400; i++) {
+//        initConn();
+//        insert(100);
+        for (int i = 0; i < 100; i++) {
             initConn();
             insert(10000);
             System.out.println("--------------------------------"+i);
-        }*/
+        }
 
     }
 }
