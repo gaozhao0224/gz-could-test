@@ -30,6 +30,7 @@
         <module>nacos-production-7002</module>
         <module>nacos-config-6666</module>
         <module>java-test-demo</module>
+        <module>rabbitmq-consumer-5500</module>
     </modules>
 
 
