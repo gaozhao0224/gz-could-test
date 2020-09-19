@@ -14,4 +14,7 @@ import com.common.entity.production.GzPerson;
 public interface IGzPersonService extends IService<GzPerson> {
 
     boolean transactionOneColony(GzPerson gzPerson);
+
+    void getTest();
+
 }

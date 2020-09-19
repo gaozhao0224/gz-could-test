@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -26,6 +27,8 @@ public class GzPersonServiceImpl extends ServiceImpl<GzPersonMapper, GzPerson> i
 
     @Autowired
     private ProductionService productionService;
+    @Autowired
+    private GzPersonMapper gzPersonMapper;
 
     @Override
     public boolean transactionOneColony(GzPerson gzPerson) {
@@ -52,5 +55,10 @@ public class GzPersonServiceImpl extends ServiceImpl<GzPersonMapper, GzPerson> i
             throw new RuntimeException();
         }
         return falg;
+    }
+
+    @Override
+    public void getTest() {
+        gzPersonMapper.getTest();
     }
 }

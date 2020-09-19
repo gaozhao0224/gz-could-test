@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 @RestController
 @Slf4j
 @RequestMapping("/test")
-public class LoadBalaController {
+public class TestLoadBalaController {
 
     @Autowired
     private ProductionService productionService;
@@ -49,5 +51,23 @@ public class LoadBalaController {
         Object o = productionService.loadBalancerTest(user);
         return o.toString();
     }
+
+
+    @RequestMapping("/timeOut")
+    public Object timeOut() throws Exception {
+        TimeUnit.SECONDS.sleep(4);
+        return "网关超时3秒，feign超时5秒，降级10s";
+    }
+    @RequestMapping("/timeOut1")
+    public Object timeOut1() throws Exception {
+        //productionService.timeOut();
+        try {
+            log.info("timeOut1");
+            return "s";
+        }catch (Exception e){
+            return "网关超时3秒，feign超时5秒，降级10s";
+        }
+    }
+
 
 }
