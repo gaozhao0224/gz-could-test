@@ -1,5 +1,6 @@
 package com.example.production.service.impl;
 
+import cn.hutool.core.util.IdUtil;
 import com.common.entity.production.GzPerson;
 import com.example.production.mapper.GzPersonMapper;
 import com.example.production.service.IGzPersonService;
@@ -22,6 +23,9 @@ public class GzPersonServiceImpl extends ServiceImpl<GzPersonMapper, GzPerson> i
     @Transactional
     public Object getSaveOrUpdate(GzPerson gzPerson) {
         System.out.println(gzPerson.toString());
+        gzPerson.setId(IdUtil.simpleUUID());
+        gzPerson.setUserName("production服务方");
+        //int i = 10/0;
         return saveOrUpdate(gzPerson);
     }
 }
