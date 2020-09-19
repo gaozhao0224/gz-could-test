@@ -18,7 +18,7 @@ public class FeignController {
     @RequestMapping("/getGzPerson")
     public Object getGzPerson(){
         GzPerson gzPerson = productionService.getGzPerson("123");
-
+        //
         System.out.println(gzPerson.toString());
         return gzPerson;
     }
