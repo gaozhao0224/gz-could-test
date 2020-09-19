@@ -13,7 +13,7 @@ public class FeignController {
     @Autowired
     private ProductionService productionService ;
     /*
-    * 测试feign调用的时候  @ResponseBody 的作用
+    * 测试feign调用的时候  @ResponseBody 的作用 123
     * */
     @RequestMapping("/getGzPerson")
     public Object getGzPerson(){
