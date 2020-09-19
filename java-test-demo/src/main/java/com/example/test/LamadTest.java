@@ -12,22 +12,26 @@ import java.util.stream.Collectors;
 public class LamadTest {
     public static void main(String[] args) {
         List<String> objects = new ArrayList<String>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 200; i++) {
             objects.add(i+"");
         }
 
+        /*
+        *  parallelStream 并行执行 开启多线程 所以速度快
+        *
+        * */
 
 
         long l = System.currentTimeMillis();
         for (String object : objects) {
-            TestMethod();
+            TestMethod(object);
         }
         long l1 = System.currentTimeMillis();
         System.out.println(l1-l);
 
 
         long l2 = System.currentTimeMillis();
-        objects.parallelStream().forEach(i -> TestMethod());
+        objects.parallelStream().forEach(i -> TestMethod(i));
         long l3 = System.currentTimeMillis();
         System.out.println(l3-l2);
         /*List<String> objects = new ArrayList<String>();
@@ -56,11 +60,11 @@ public class LamadTest {
 
     }
 
-    private static void TestMethod() {
+    private static void TestMethod(String str) {
         try {
             /*Thread.sleep(1);*/
-            System.out.println(Thread.currentThread().getName());
-            TimeUnit.SECONDS.sleep(1);
+            System.out.println(Thread.currentThread().getName()+"\t\t\t\t"+str);
+            //TimeUnit.SECONDS.sleep(1);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -154,6 +158,9 @@ public class LamadTest {
 
 
 
+    /*
+    * 正则判断是否是数字
+    * */
     @Test
     public void test4(){
         Matcher isNum = pattern.matcher("i");
@@ -163,4 +170,25 @@ public class LamadTest {
         System.out.println(matches);
         System.out.println(nums);
     }
+    /*
+    * 多次测试 超过五万就很容易出问题了  数据会少
+    * */
+    @Test
+    public void test5(){
+        List<String> strings = new ArrayList<>();
+        List<String> stringnum = new ArrayList<>();
+
+        for (int i = 0; i < 5000; i++) {
+            strings.add(i+"");
+        }
+        strings.parallelStream().forEach(i -> getOut(i,stringnum));
+        System.out.println("--------------------------------------------------");
+        System.out.println(stringnum.size());
+    }
+
+    public void  getOut (String str,List stringnum){
+        stringnum.add(str);
+        System.out.println(str+ "\t\t\t" +Thread.currentThread().getName());
+    }
+
 }
