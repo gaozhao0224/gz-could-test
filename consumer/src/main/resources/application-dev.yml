@@ -41,6 +41,7 @@ spring:
           log-slow-sql: true
   rabbitmq:
     host: 118.24.17.24
-    port: 15672
+    port: 5672
     username: gzmq
     password: gzmq
+    virtual-host: /gzmq

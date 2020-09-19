@@ -43,3 +43,19 @@ mybatis-plus:
     call-setters-on-nulls: true
     jdbc-type-for-null: 'null'
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 10000
+  #feign调用超时时长  默认1s  改为5秒
+  ConnectTimeout: 10000
+  SocketTimeout: 10000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000  #配置超时时长
