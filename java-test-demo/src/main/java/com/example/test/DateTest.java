@@ -56,4 +56,35 @@ public class DateTest {
         Date today = calendar.getTime();
         System.out.println(sdf.format(today));
     }
+
+    /*
+    * 向前延申几个月
+    * */
+    @Test
+    public void firstFwMonths(){
+        String[] strings = firstFwMonths(16);
+        for (String string : strings) {
+            System.out.println(string);
+        }
+    }
+    public String [] firstFwMonths(int num){
+        String[] lastMonths = new String[num];
+        Calendar cal = Calendar.getInstance();
+        //如果当前日期大于二月份的天数28天或者29天会导致计算月份错误，会多出一个三月份，故设置一个靠前日期解决此问题
+        cal.set(Calendar.DAY_OF_MONTH, 1);
+        for (int i = 0; i < num; i++) {
+            lastMonths[(num-1) - i] = cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1);
+            cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 1); //逐次往前推1个月
+        }
+        /*
+         * 格式化日期
+         * */
+        for (int i =0;i<lastMonths.length;i++) {
+            String[] split = lastMonths[i].split("-");
+            if(Integer.valueOf(split[1])<10){
+                lastMonths[i] = split[0]+"-0"+split[1];
+            }
+        }
+        return lastMonths;
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.test;
-
+/*
+* 异常不被捕获 抛出之后不会再执行下面代码
+* */
 public class ExceptionTest {
     public static void main(String[] args) {
         String test = test();
