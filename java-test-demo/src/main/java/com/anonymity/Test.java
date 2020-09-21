@@ -15,7 +15,8 @@ public class Test {
         * 之所以说只能用一次 是因为一次就是一个匿名内部类多次修改就是多个了  而不是像创建一个真是存在的类一样一直去根据它这个模板去new 去用
         * 一般用用继承抽象类或者实现接口的时候使用 比如new Thread(){}
         * */
-        StopWatch stopWatch = new StopWatch();
+
+        StopWatch stopWatch = new StopWatch();//spring-framework提供了一个StopWatch类可以做类似任务执行时间控制，也就是封装了一个对开始时间，结束时间记录操作的Java类
         stopWatch.start();
         PersonAbstr PersonAbstrObj1 = new PersonAbstr() {
             @Override
@@ -71,17 +72,13 @@ public class Test {
         System.out.println("----------------------------------");
         personInteImpl2.getPersonInte();
         System.out.println(personInteImpl2.toString());
-        stopWatch.stop();
-        try {
+        /*try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
+        stopWatch.stop();
         System.out.println("一共执行"+stopWatch.getLastTaskTimeMillis());
-
-
-
-
 
 
         /*
