@@ -31,6 +31,9 @@
         <module>nacos-config-6666</module>
         <module>java-test-demo</module>
         <module>rabbitmq-consumer-5500</module>
+        <module>tx-lcn-server-8500</module>
+        <module>tx-lcn-client-8888</module>
+        <module>tx-lcn-client-8889</module>
     </modules>
 
 
