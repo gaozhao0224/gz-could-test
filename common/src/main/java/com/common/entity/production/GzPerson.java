@@ -34,4 +34,12 @@ public class GzPerson extends BaseEntity implements Serializable {
 
     private String age;
 
+    @Override
+    public String toString() {
+        return this.hashCode()+"\tGzPerson{" +
+                "userName='" + userName + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }
