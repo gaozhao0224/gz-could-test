@@ -1,6 +1,7 @@
 package com.example.consumer.test.controller;
 
 import com.common.controller.BaseController;
+import com.common.util.StringUtils;
 import com.feign.production.service.ProductionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -69,6 +72,19 @@ public class LockController extends BaseController {
         Object str = productionService.concurrenceManyRedisson(num);
         System.out.println(str);
         return str;
+    }
+    @RequestMapping("/setRedis")
+    public Object setRedis(String key,String value,Long time,String s,String m){
+        StringBuilder result = new StringBuilder();
+        if(StringUtils.isNotEmpty(s) && !StringUtils.isNotEmpty(m)){
+            stringRedisTemplate.opsForValue().set(key,value,time, TimeUnit.SECONDS);
+            result.append("新增秒成功");
+        }
+        if(StringUtils.isNotEmpty(m) && !StringUtils.isNotEmpty(s)){
+            stringRedisTemplate.opsForValue().set(key,value,time, TimeUnit.MINUTES);
+            result.append("新增分成功");
+        }
+        return result;
     }
 
 }

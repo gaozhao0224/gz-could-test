@@ -11,7 +11,7 @@ public class BeanUtilsCopy {
 
     public static void main(String[] args) {
         /*
-        * 测试是深copy还是浅copy
+        * 测试是深copy还是浅copy     结论是深copy
         * */
         Animal animal = new Animal();
         Animal animalCopy = new Animal();
@@ -71,4 +71,6 @@ public class BeanUtilsCopy {
         }
 
     }
+
+
 }

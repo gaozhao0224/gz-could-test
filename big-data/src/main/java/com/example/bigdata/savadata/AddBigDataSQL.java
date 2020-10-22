@@ -91,7 +91,7 @@ public class AddBigDataSQL {
 
     public static void insert(int insertNum) {
         // 开时时间
-        Long begin = System.currentTimeMillis();
+        //Long begin = System.currentTimeMillis();
         System.out.println("开始插入数据...");
         // sql前缀
         String prefix = "INSERT INTO gz_big_data (user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
@@ -128,20 +128,27 @@ public class AddBigDataSQL {
             e.printStackTrace();
         }
         // 结束时间
-        Long end = System.currentTimeMillis();
-        System.out.println("插入"+insertNum+"条数据数据完成！");
-        System.out.println("耗时 : " + (end - begin) / 1000 + " 秒");
+        //Long end = System.currentTimeMillis();
+        //System.out.println("插入"+insertNum+"条数据数据完成！");
+        //System.out.println("耗时 : " + (end - begin) / 1000 + " 秒");
     }
 
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        initConn();
 //        insert(100);
-        for (int i = 0; i < 100; i++) {
+        int num = 0;
+        int insert = 10;
+        // 开时时间
+        Long begin = System.currentTimeMillis();
+        for (int i = 0; i < 10; i++) {
             initConn();
-            insert(10000);
-            System.out.println("--------------------------------"+i);
+            insert(insert);
+            num+=insert;
+            System.out.println("第"+i+"次插入.........");
         }
-
+        // 结束时间
+        Long end = System.currentTimeMillis();
+        System.out.println("耗时 : " + (end - begin) / 1000 + " 秒\t\t共插入"+num+"条");
     }
 }

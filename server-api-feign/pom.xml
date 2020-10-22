@@ -15,6 +15,7 @@
     <modules>
         <module>production</module>
         <module>hystrix</module>
+        <module>nacos-prodution</module>
     </modules>
 
 

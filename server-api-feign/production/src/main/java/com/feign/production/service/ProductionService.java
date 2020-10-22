@@ -25,4 +25,11 @@ public interface ProductionService {
     String concurrenceManyRedisson(@PathVariable("num") String num);
     @PostMapping("/production/addPerson")
     Object addPerson(@RequestBody GzPerson gzPerson);
+    @PostMapping("/production/timeOut")
+    String timeOut();
+
+    //@RequestMapping(value = "/getGzPerson", method = RequestMethod.POST)
+    @PostMapping("/production/getGzPerson")
+    @ResponseBody
+    GzPerson getGzPerson(@RequestParam("id") String id);
 }

@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 * 关于分布式事务注解   在调用端用注解 被调用端不用 没有作用 。  被调用端会入库
 *                   在被调用端用注解 调用端不用 没有作用 。  被调用端会入库
 *               结论：必须在两边都要加上@LcnTransaction注解
+*                    LcnTransaction会覆盖Transactional  所有异常都会回滚
 *
 * */
 public class TxLcAController {

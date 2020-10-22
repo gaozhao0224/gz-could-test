@@ -19,8 +19,18 @@ eureka:
 #默认密码  codingapi   改成  gaozhao
 tx-lcn:
   manager:
-    dtx-time: 60000
-
+    #dtx-time: 60000
+    admin-key: 123456
+    host: 127.0.0.1
+    port: 8070
+  ribbon:
+    loadbalancer:
+      dtx:
+        enabled: true
+  message:
+    netty:
+      reconnect-count: 100
+      reconnect-delay: 6000
   logger:
     enabled: true
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,3 +38,8 @@ tx-lcn:
     jdbc-url: jdbc:mysql://127.0.0.1:3306/gz-could?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
+logging:
+  level:
+    com:
+      codingapi:
+        txlcn: DEBUG

@@ -16,3 +16,20 @@ eureka:
 #      defaultZone: http://eureka-gz01.com:1001/eureka/
       #集群版
       defaultZone: http://eureka-gz01.com:1001/eureka/,http://eureka-gz02.com:1002/eureka/,http://eureka-gz03.com:1003/eureka/
+
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 3000
+  #feign调用超时时长  默认1s  改为5秒
+  ConnectTimeout: 3000
+  SocketTimeout: 3000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000  #配置超时时长
