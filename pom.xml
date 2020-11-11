@@ -34,6 +34,7 @@
         <module>tx-lcn-server-8500</module>
         <module>tx-lcn-client-8888</module>
         <module>tx-lcn-client-8889</module>
+        <module>web-test-demo</module>
     </modules>
 
 
