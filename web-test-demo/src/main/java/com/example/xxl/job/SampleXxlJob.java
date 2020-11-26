@@ -10,7 +10,7 @@ public class SampleXxlJob {
     /**
      * 1、简单任务示例（Bean模式）  xxl.job.executor.port=9998  xxl.job.executor.appname=web-test-demo
      * 执行器任务 中得AppName  必须是 xxl.job.executor.appname
-     *
+     *1
      */
     @XxlJob("gz")
     public void gz() throws Exception {
