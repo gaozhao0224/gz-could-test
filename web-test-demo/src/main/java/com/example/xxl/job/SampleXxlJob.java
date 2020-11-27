@@ -17,4 +17,9 @@ public class SampleXxlJob {
         XxlJobHelper.log("XXL-JOB, Hello World.");
             System.out.println("111111111111111111111111111-------------------------------------------11111111111111111111111111111111");
         }
+    @XxlJob("gz1")
+    public void gz1() throws Exception {
+        XxlJobHelper.log("XXL-JOB, Hello World.");
+            System.out.println("2222222222-------------------------------------------22222222222222222222");
+        }
 }
