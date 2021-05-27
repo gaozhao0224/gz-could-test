@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.rules.Stopwatch;
 import org.springframework.util.StopWatch;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,8 +37,13 @@ public class LambdaTest {
         for (String s : map1.keySet()) {
             System.out.println(s+"  "+map1.get(s));
         }
+        String name = "10";
+        //匿名内部类必须是fianl或者有效的final
+//        if(name!=null){
+//            name = "10";
+//        }
         //过滤 求id为10的集合
-        List<Person> list1 = persons.stream().filter(i -> i.getId().equals("10")).collect(Collectors.toList());
+        List<Person> list1 = persons.stream().filter(i -> i.getId().equals(name)).collect(Collectors.toList());
         //将对象的id拿出来创建一个集合 ::代表当前对象的方法
         List<String> list2 = persons.stream().map(p -> p.getId()).collect(Collectors.toList());
         List<String> list3 = persons.stream().collect(Collectors.mapping(Person::getName,Collectors.toList()));
@@ -61,7 +67,7 @@ public class LambdaTest {
         *           abc [1, 2, 3, 4, 5]
         *           efg [6, 7, 8, 9, 10]
         * */
-        Map<String, List<String>> collect = list.stream().filter(p -> Objects.nonNull(p)).collect(Collectors.groupingBy(Person::getLetter, Collectors.mapping(Person::getId, Collectors.toList())));
+        Map<String, List<String>> collect = list.stream().filter(p -> Objects.nonNull(p)).collect(Collectors.groupingBy(Person::getLetter, Collectors.mapping(Person::getId,Collectors.toList())));
         for (String s : collect.keySet()) {
             System.out.println(s+" "+collect.get(s));
         }
@@ -125,9 +131,76 @@ public class LambdaTest {
 
     @Test
     public void newObj(){
-        Runnable aNew = Person::new;
-        Person person = new Person(){};
+        List<Person> people = getListPerson();
+//        people = people.stream().filter(i -> i.getId().equals("1")).collect(Collectors.toList());
+//        System.out.println(people.size());
+//        for (Person person4 : people) {
+//            System.out.println(person4);
+//        }
+        List<Person> aaa = people.stream().map(i->{
+            i.setLetter("a");
+            return i;
+        }).collect(Collectors.toList());
+        for (Person person4 : aaa) {
+            System.out.println(person4);
+        }
+    }
+    @Test
+    public void newObj1(){
+        List<Person> people = getListPerson();
 
+        List<Person> list = new ArrayList<>();
+        //对象存放不上 需要用foreach 下面方法
+//        people.stream().map(i->list.add(i));
+//        for (Person person : list) {
+//            System.out.println(person);
+//        }
+        //foreach
+//        people.stream().forEach(i->list.add(i));
+//        for (Person person : list) {
+//            System.out.println(person);
+//        }
+        //用map加方法体试试
+        people.stream().map(i->{//匿名内部类
+
+            i.setLetter(i.getId());
+            //list.add(i);
+            return i;
+        }).collect(Collectors.toList());
+        for (Person person : people) {
+            System.out.println("map{}"+person);
+        }
     }
 
+
+    public List<Person> getListPerson(){
+        List<Person> people = new ArrayList<>();
+        Person person1 = new Person();
+        Person person2 = new Person();
+        Person person3 = new Person();
+        person1.setId("1");
+        person2.setId("2");
+        person3.setId("3");
+        person1.setName("张三");
+        person2.setName("李四");
+        person3.setName("赵五");
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        return people;
+    }
+
+    @Test
+    public void getTest1(){
+        List<Person> listPerson = getListPerson();
+        List<Person> collect = listPerson.stream().map(i -> {
+            Person person = new Person();
+            person.setLetter("1111");
+            return person;
+        }).collect(Collectors.toList());
+        for (Person person : collect) {
+            System.out.println(person);
+        }
+
+    }
 }

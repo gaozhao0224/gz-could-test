@@ -1,10 +1,14 @@
 package com.date;
 
+import org.junit.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import org.joda.time.DateTime;
+import org.springframework.util.StringUtils;
 
 public class DateString {
 
@@ -13,7 +17,7 @@ public class DateString {
 
         //List<String> days = getDays("2020-01-01", "2020-09-20");
         //List<String> days = compeleteDate("2020-01-01", "2020-09-20");
-        List<String> days = addDates("2020-07-26", "2020-09-25");
+        List<String> days = addDates("2020-07-27", "2020-10-30");
         System.out.println(days.size());
         for (int i = 1; i <days.size(); i++) {
             System.out.println("PARTITION p"+days.get(i-1)+" VALUES LESS THAN ('"+days.get(i)+"') ENGINE = InnoDB,");
@@ -50,5 +54,17 @@ public class DateString {
             time += oneDay;
         }
         return list;
+    }
+
+    @Test
+    public void get1(){
+        String startMonth = new DateTime().minusMonths(1).toString("yyyy-MM-01");
+        String endMonth = new DateTime().minusMonths(1).toString("yyyy-MM-31");
+        System.out.println(startMonth);
+        System.out.println(endMonth);
+    }
+    @Test
+    public void get2(){
+
     }
 }
