@@ -1,4 +1,4 @@
-package com.demo;
+package com.crc.demo;
 
 public class AAAAA {
 

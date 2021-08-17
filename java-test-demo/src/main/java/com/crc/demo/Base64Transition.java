@@ -1,7 +1,6 @@
-package com.demo;
+package com.crc.demo;
 
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 public class Base64Transition {
 

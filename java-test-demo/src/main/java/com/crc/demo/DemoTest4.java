@@ -1,9 +1,9 @@
-package com.demo;
+package com.crc.demo;
 
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DemoTest4 {
     @Test
@@ -62,7 +62,17 @@ public class DemoTest4 {
     }
     @Test
     public void test3(){
+        Integer a = 127;
+        Integer b = 128;
+        Integer cc = -129;
+        Integer c = -128;
+        Integer d = -127;
 
+        System.out.println(a==127);
+        System.out.println(a==128);
+        System.out.println(c==-128);
+        System.out.println(d==-127);
+        System.out.println(d==-129);
     }
     @Test
     public void test4(){
@@ -86,10 +96,18 @@ public class DemoTest4 {
     }
     @Test
     public void test9(){
-
+        List<String> strings = Arrays.asList("1", "2", "3", "4", "5");
+        for (int i = 0; i < 6; i++) {
+            System.out.println(strings.get(i));
+        }
     }
     @Test
     public void test10(){
-
+        List<String> list = Arrays.asList("1","1","2","3","4");
+        System.out.println(list.size());
+        list = list.stream().filter(s->{
+            return s.equals("1");
+        }).collect(Collectors.toList());
+        System.out.println(list.size());
     }
 }

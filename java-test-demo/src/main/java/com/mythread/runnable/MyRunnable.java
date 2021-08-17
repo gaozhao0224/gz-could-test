@@ -1,6 +1,7 @@
 package com.mythread.runnable;
 
 import lombok.SneakyThrows;
+import org.omg.SendingContext.RunTime;
 
 public class MyRunnable implements Runnable{
     public static void main(String[] args) {
@@ -20,7 +21,6 @@ public class MyRunnable implements Runnable{
                 System.out.println(name+"线程开始执行了>>>>>>>>"+i);
             }
         }).start();
-
 
     }
 

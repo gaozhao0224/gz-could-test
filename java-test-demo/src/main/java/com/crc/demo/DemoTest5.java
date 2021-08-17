@@ -1,8 +1,9 @@
-package com.demo;
+package com.crc.demo;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DemoTest5 {
@@ -25,7 +26,14 @@ public class DemoTest5 {
     }
     @Test
     public void test4(){
+        HashMap<String, String> map = new HashMap<>();
+        putMap(map);
 
+
+    }
+    void putMap(HashMap<String, String> map){
+        map.put("1","2");
+        putMap(map);
     }
     @Test
     public void test5(){
@@ -65,10 +73,13 @@ public class DemoTest5 {
     }
     @Test
     public void test8(){
-
+        long audit = 1;
+        System.out.println(audit>0);
     }
     @Test
-    public void test9(){
+    public void test9() {
+        HashMap<Object, Object> map = new HashMap<>(16);
+        String str="abcdcf";
 
     }
     @Test

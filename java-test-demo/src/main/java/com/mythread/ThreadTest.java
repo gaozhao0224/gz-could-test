@@ -21,6 +21,10 @@ public class ThreadTest {
         /**  state 获取线程状态*/
 
         /**  daemon 守护线程*/
+
+        new Thread(()->{
+
+        },"A").start();
     }
 
 }

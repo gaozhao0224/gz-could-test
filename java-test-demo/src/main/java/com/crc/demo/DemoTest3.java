@@ -1,11 +1,10 @@
-package com.demo;
+package com.crc.demo;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.Random;
 
 public class DemoTest3 {
     @Test

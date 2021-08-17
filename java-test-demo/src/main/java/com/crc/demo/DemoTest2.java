@@ -1,6 +1,5 @@
-package com.demo;
+package com.crc.demo;
 
-import com.lambda.Person;
 import org.junit.Test;
 
 import javax.imageio.ImageIO;
@@ -8,8 +7,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
