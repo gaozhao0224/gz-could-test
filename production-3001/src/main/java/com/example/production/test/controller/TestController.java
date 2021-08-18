@@ -151,12 +151,12 @@ public class TestController extends BaseController {
         RLock lock = redisson.getLock(commodityId);
         try {
             //当有请求过去后 其他请求阻塞等待   10s内请求走完释放锁 没走完里面继续更新10s（只要逻辑没走完就不会让锁超时）
-            lock.lock(10,TimeUnit.SECONDS);
+            lock.lock(5,TimeUnit.SECONDS);
             String gz = stringRedisTemplate.opsForValue().get(key);
             Integer num = Integer.valueOf(gz);
             if(num>0){
                 num--;
-                stringRedisTemplate.opsForValue().set("gz",""+num);
+                stringRedisTemplate.opsForValue().set(key,""+num);
                 System.out.println("成功 还剩：\t"+num);
                 str =  "成功 还剩：\t"+num;
             }else{
@@ -164,8 +164,13 @@ public class TestController extends BaseController {
                 str = "库存不足";
             }
         }finally {
-            //释放锁
-            lock.unlock();
+            //释放锁 在解锁之前先判断要解锁的key是否已被锁定并且是否被当前线程保持。 如果满足条件时才解锁
+            System.out.println("释放锁");
+            if(lock.isLocked()){
+                if(lock.isHeldByCurrentThread()){
+                    lock.unlock();
+                }
+            }
         }
 
         return str;

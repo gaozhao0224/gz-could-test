@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -47,6 +48,16 @@ public class GzPersonController {
         gzPerson.setUserName("张三李四");
         gzPerson.setSex("男");
         return gzPerson;
+    }
+
+    @GetMapping("/getUiBotVal")
+    public String getUiBotVal(){
+        Random random = new Random();
+        if(random.nextInt(10)>5){
+            return "hello uiBot";
+        }else{
+            return ">5";
+        }
     }
 
 }
