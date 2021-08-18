@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Data
 @PropertySource("classpath:config.properties")
 public class ConfigProperties {
-    @Value("url")
+    @Value("${url}")
     private String url ;
 
 }

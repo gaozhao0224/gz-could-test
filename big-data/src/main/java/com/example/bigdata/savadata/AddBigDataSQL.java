@@ -1,5 +1,6 @@
 package com.example.bigdata.savadata;
 
+import cn.hutool.core.date.StopWatch;
 import com.example.bigdata.config.ConfigProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -7,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddBigDataSQL {
     static Connection conn = null;
@@ -22,7 +24,7 @@ public class AddBigDataSQL {
         try {
             // 动态加载mysql驱动
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("成功加载MySQL驱动程序");
+            //System.out.println("成功加载MySQL驱动程序");
             conn = DriverManager.getConnection(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,9 +94,9 @@ public class AddBigDataSQL {
     public static void insert(int insertNum) {
         // 开时时间
         //Long begin = System.currentTimeMillis();
-        System.out.println("开始插入数据...");
+        //System.out.println("开始插入数据...");
         // sql前缀
-        String prefix = "INSERT INTO gz_big_data (user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
+        String prefix = "INSERT INTO sys_user (user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
         //String prefix = "INSERT INTO tb_data (id, user_name, create_time, random,email,mobile,address,sex,tid) VALUES ";
         //随机生成1000家公司
         //String prefix = "INSERT INTO tb_tenement (id, tid, tname) VALUES ";
@@ -107,7 +109,7 @@ public class AddBigDataSQL {
             PreparedStatement pst = conn.prepareStatement("");
             for (int i = 1; i <= insertNum; i++) {
                 // 构建sql后缀
-                suffix.append("('"+ ChineseName.randomChineseName()  + "', SYSDATE(), " + i * Math.random() + ",'"+ randomEmail(5,10) + "','"+ randomMobile() + "','" + randomAddress() + "','" + randomIdSex()+ "','" + randomStr(5)+"'),");
+                suffix.append("('"+ ChineseName.randomChineseName()  + "', SYSDATE(), " + i * Math.random() + ",'"+ randomEmail(5,10) + "','"+ randomMobile() + "','" + randomAddress() + "','" + randomIdSex()+ "','" + ChineseName.randomCompany()+"'),");
                 //suffix.append("("+ i +",'"+ ChineseName.randomChineseName()  + "', SYSDATE(), " + i * Math.random() + ",'"+ randomEmail(5,10) + "','"+ randomMobile() + "','" + randomAddress() + "','" + randomIdSex()+ "','" + randomStr(5)+"'),");
                 //1000家公司数据
                 //suffix.append("(" + i +",'" + randomStr(5) + "','" + ChineseName.randomCompany(getNum(3,10)) + "'),");
@@ -138,17 +140,22 @@ public class AddBigDataSQL {
 //        initConn();
 //        insert(100);
         int num = 0;
-        int insert = 10;
+        //按万为单位了  40000就会报错
+        int insert = 30000;
+        StopWatch stopWatch = new StopWatch();
         // 开时时间
-        Long begin = System.currentTimeMillis();
-        for (int i = 0; i < 10; i++) {
+        stopWatch.start();
+        //减小这层循环次数  速度能快  insert大 这个循环小就快  反正慢
+        for (int i = 0; i < 100; i++) {
             initConn();
             insert(insert);
             num+=insert;
-            System.out.println("第"+i+"次插入.........");
+            System.out.println("第"+(i+1)+"次插入.........");
         }
+
         // 结束时间
-        Long end = System.currentTimeMillis();
-        System.out.println("耗时 : " + (end - begin) / 1000 + " 秒\t\t共插入"+num+"条");
+        stopWatch.stop();
+
+        System.out.println("耗时 : " + stopWatch.getLastTaskTimeMillis() + " 毫秒\t\t共插入"+num+"条");
     }
 }

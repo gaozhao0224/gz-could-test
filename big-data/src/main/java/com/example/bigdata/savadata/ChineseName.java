@@ -70,11 +70,18 @@ public class ChineseName {
         }
         return str;
     }
-
+    //获取公司tid
+    public static String randomCompany() {
+        String [] tids = {"HKEx","KANTAR","FQZJ","ZHGJ","kapa_sh","OAJ","YLYL","KWS","SW_BJ","Motorola_BJ","Munters_BJ","NeuLion_BJ","ZCLQ","LPKJ","YDHT","CZZC","HMBSKJ","HFBZ","CHROMALLOY","STFZ","YGHT_BJ","YBS","IVECO","SBZY","YTGSHWDZ","SHARAFSHIPPING","Siloking","XYLEMANALYTICS","RGNZX","SWA","ZYGJKG","GULFSTREAM","NITTO","PUYINGLAW","Gabriel_BJ","WTCA","Biotronik_BJ","ZTTBSZGC","SICK","BJJTDN","Actemium","DDAZX","BenCao","KaiWu","NOKIADRTX","Oberthur_BJ","BJSKZX","YZJY","BJFWXX","PEARSON","ZZFHSY","WFJSYYY","FESCOGroup","GreenPeace","Sullcrom","XINDUN","Longfor","YDZX","CanadaTravel","CPCEP","WEKY","XGNY","BXDZ","HNair","NCT","SHHW","TAX","CYTX","aspire-tech","Hola","Cogent","ZKCC","XLSH","HYHK","XFT","CXKJ","369","HLAC","Westinghouse_BJ","ZG","WLS","HLLY","kantar2","CliffordChance","CDLHJH","NXH","Pfizer","LongHu_BJ","webasto","WLY","XFJJ","shell_pqg","XSL","Person","BakerHughes","360BJ","360JK","DaoYiCi","longfor_ChangSha","LaiYinTiYu"};
+        int i = new Random().nextInt(100);
+        return tids[i];
+    }
     public static void main(String[] args) {
         for (int i = 0; i < 1000; i++) {
             String s = randomChineseName();
             System.out.println(s);
         }
     }
+
+
 }
