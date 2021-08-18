@@ -67,7 +67,7 @@ class Data3{ // 资源类 Lock
     public void printC(){
         lock.lock();
         try {
-            // 业务，判断-> 执行-> 通知
+            // 业务，判断-> 执行-> 通知 。
             while (number!=3){
                 condition3.await();
             }
