@@ -51,11 +51,13 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://121.36.69.22:3306/electsign_platform_test?useSSL=false");
+        //dsc.setUrl("jdbc:mysql://127.0.0.1:3306/gz-could?useSSL=false");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/gz-could?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("admin");
-        dsc.setPassword("1234qwer");
+        //dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+        dsc.setUsername("root");
+        dsc.setPassword("root");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -131,7 +133,7 @@ public class CodeGenerator {
        // strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
-        strategy.setInclude(scanner("bs_contract_sign_log").split(","));
+        strategy.setInclude(scanner("oc_dosage_record").split(","));
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

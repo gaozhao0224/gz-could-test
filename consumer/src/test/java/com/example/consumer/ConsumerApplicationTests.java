@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Collection;
@@ -18,6 +19,8 @@ public class ConsumerApplicationTests {
 
     @Autowired
     private PropertySourceProperties propertySourceProperties;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
     @Test
     public void contextLoads() {
         System.out.println(propertySourceProperties.toString());
@@ -34,6 +37,12 @@ public class ConsumerApplicationTests {
         for (String value : values) {
             System.out.println(value);
         }
+    }
+    @Test
+    public void test2(){
+        stringRedisTemplate.opsForValue().set("a","aaaaaaaa");
+        String a = stringRedisTemplate.opsForValue().get("a");
+        System.out.println(a);
     }
 
 }
