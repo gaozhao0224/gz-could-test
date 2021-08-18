@@ -69,9 +69,9 @@ public class TestRabbitMQ {
 //        rabbitTemplate.convertAndSend("topicExchange","userupdategzlr","发送key为user.update.gz.lr的消息");
 //        rabbitTemplate.convertAndSend("topicExchange","userdelete","发送key为delete的消息");
         rabbitTemplate.convertAndSend("topicExchange","user.add","发送key为user.add的消息");
-        rabbitTemplate.convertAndSend("topicExchange","user.insert.gz","发送key为user.insert.gz的消息");
         rabbitTemplate.convertAndSend("topicExchange","user.update.gz.lr","发送key为user.update.gz.lr的消息");
+        rabbitTemplate.convertAndSend("topicExchange","user.insert.gz","发送key为user.insert.gz的消息");
         rabbitTemplate.convertAndSend("topicExchange","user.delete","发送key为delete的消息");
-        rabbitTemplate.convertAndSend("topicExchange1","user.delete","发送key为delete的消息");
+        //rabbitTemplate.convertAndSend("topicExchange1","user.delete","发送key为delete的消息");
     }
 }

@@ -34,5 +34,9 @@ public class UiBotTest {
     public Object getName(){
         return ChineseName.randomChineseName();
     }
+    @GetMapping("/base64")
+    public Object base64(){
+        return ChineseName.randomChineseName();
+    }
 
 }

@@ -1,0 +1,89 @@
+server:
+  port: 1995
+spring:
+  profiles:
+    active: dev
+  redis:
+    database: 0   #不写 默认是第一个库 就是0这个  写了哪个只能访问哪个
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3000
+
+
+
+freemarker:
+  suffix: .html
+  request-context-attribute: request
+
+  datasource:
+    druid:
+      # 数据库访问配置, 使用druid数据源
+      url: jdbc:mysql://127.0.0.1:3306/gz?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      # 连接池配置
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 连接等待超时时间
+      max-wait: 30000
+      # 配置检测可以关闭的空闲连接间隔时间
+      time-between-eviction-runs-millis: 60000
+      # 配置连接在池中的最小生存时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: select '1' from dual
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-open-prepared-statements: 400
+      max-pool-prepared-statement-per-connection-size: 20
+      # 配置监控统计拦截的filters, 去掉后监控界面sql无法统计, 'wall'用于防火墙
+      filters: stat,wall
+      # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
+      #aop-patterns: com.fescotech.contract.controller.*
+      filter:
+        stat:
+          log-slow-sql: true
+mybatis-plus:
+  global-config:
+    # 数据库相关配置
+    db-config:
+      # 主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: INPUT
+      # 字段策略 IGNORED:"忽略判断"(大部分情况只能全字段更新，否则需要处理的东西太多),NOT_NULL:"非 NULL 判断",NOT_EMPTY:"非空判断"
+      insert-strategy: IGNORED
+      update-strategy: IGNORED
+      # 驼峰下划线转换
+      column-underline: false
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    # 设置一级缓存级别为每次查询都清缓存
+    local-cache-scope: STATEMENT
+    # 关闭二级缓存
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug
+
+pathUrl: G:/img/
+EpathUrl: F:/xl/img/
+cron:   0/10 0 0 * * *
+file-download:
+  url: G:/upload/

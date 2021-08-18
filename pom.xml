@@ -35,6 +35,9 @@
         <module>tx-lcn-client-8888</module>
         <module>tx-lcn-client-8889</module>
         <module>web-test-demo</module>
+        <module>web-security-demo</module>
+        <module>data-web</module>
+        <module>rabbitmq-producer-5502</module>
     </modules>
 
 

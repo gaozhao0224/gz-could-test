@@ -11,6 +11,12 @@
 
     <groupId>org.example.server-api-feign.hystrix</groupId>
     <artifactId>hystrix</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

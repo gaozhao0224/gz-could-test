@@ -14,7 +14,8 @@ eureka:
     fetch-registry: true
     service-url:
       # 入驻地址
-      defaultZone: http://eureka-gz01.com:1001/eureka/
+#      defaultZone: http://eureka-gz01.com:1001/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
       #集群版
       #defaultZone: http://eureka-gz01.com:1001/eureka/,http://eureka-gz02.com:1002/eureka/,http://eureka-gz03.com:1003/eureka/
 

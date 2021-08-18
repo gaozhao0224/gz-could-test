@@ -1,10 +1,14 @@
 package com.example.rabbitmq.test.topic;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
+
+import java.util.concurrent.TimeUnit;
+
 /*
 * 绑定多个队列 一条消息会被多个队列消费
 * 分词  通过点  点分割词  不是字符  aa.bb.cc 代表三个词 aa bb cc
@@ -62,6 +66,9 @@ public class RabbitConsumer {
 //    public void getTopic3(String message){
 //        System.out.println("333333333消费key为user.*的消息\t\t"+message);
 //    }
+
+
+
     @RabbitListener(bindings = {
             @QueueBinding(
                     value = @Queue("topicQueue4"),//创建队列
@@ -70,6 +77,43 @@ public class RabbitConsumer {
             )
     })
     public void getTopic4(String message){
+        System.out.println("4444444444444消费key为user.#的消息--topicQueue4\t\t"+message);
+    }
+
+
+
+
+
+    @RabbitListener(bindings = {
+            @QueueBinding(
+                    value = @Queue("topicQueue5"),//创建队列
+                    exchange = @Exchange(value = "topicExchange1",type = "topic"),
+                    key = {"gz.#"}
+            )
+    })
+    public void getTopic5(Dog message){
+//        try {
+//            TimeUnit.SECONDS.sleep(1);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         System.out.println("4444444444444消费key为user.#的消息\t\t"+message);
     }
+
+    @RabbitListener(bindings = {
+            @QueueBinding(
+                    value = @Queue("topicQueue6"),//创建队列
+                    exchange = @Exchange(value = "topicExchange1",type = "topic"),
+                    key = {"gz.#"}
+            )
+    })
+    public void getTopic6(Dog message){
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(300);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("66666666666666消费key为user.#的消息\t\t"+message);
+    }
+
 }
