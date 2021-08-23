@@ -52,7 +52,7 @@ public class TestJun {
             }
             System.out.println("i="+i);
         }
-        System.out.println("66666666666");
+        System.out.println("6666666666666");
     }
 
 
