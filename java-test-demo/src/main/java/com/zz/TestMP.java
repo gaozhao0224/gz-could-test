@@ -11,7 +11,7 @@ public class TestMP {
                 try {
                     getNum();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    e.printStackTrace();//
                 }
             }).start();
         }
