@@ -19,7 +19,7 @@ public class TestJun {
             num++;
         }
         stopWatch.stop();
-        System.out.println(stopWatch.getLastTaskTimeMillis()+"     num = "+num);
+        System.out.println(stopWatch.getLastTaskTimeMillis()+"     num = "+num+"");
 
     }
 
