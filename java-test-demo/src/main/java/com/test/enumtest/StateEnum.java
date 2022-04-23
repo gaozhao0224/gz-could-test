@@ -6,7 +6,9 @@ public enum StateEnum {
 
     CG("1","成功"),
     SB("2","失败"),
-    DD("3","待定"),;
+    DD("3","待定"),
+
+    ;
 
     private final String key ;
     private final String value ;
